@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class MySQLConnection {
+public class MySQLDataSource {
     private static final String BASE_URL = "jdbc:mysql://localhost:3306/";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
