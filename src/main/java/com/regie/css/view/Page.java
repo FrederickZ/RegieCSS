@@ -1,12 +1,16 @@
 package com.regie.css.view;
 
-import com.regie.css.util.Body;
-import com.regie.css.util.Request;
+import com.regie.css.util.Args;
 
 import java.util.Scanner;
 
 public abstract class Page {
-    Scanner scanner = new Scanner(System.in);
+    public Args args;
+    public static final Scanner scanner = new Scanner(System.in);
+
+    public Page(Args args) {
+        this.args = args;
+    }
 
     public abstract void run();
     public void redirect(Page redirectedPage) {

@@ -1,25 +1,22 @@
 package com.regie.css.view;
 
 import com.regie.css.controller.UserController;
+import com.regie.css.util.Args;
 import com.regie.css.util.Request;
 import com.regie.css.util.Response;
 
+/* css.regie.com */
+
 public class IndexPage extends Page {
-    private static IndexPage indexPage = null;
+    public static final String PATH = "/";
 
-    private IndexPage() {}
-
-    public static IndexPage getIndexPage() {
-        if (indexPage == null) {
-            indexPage = new IndexPage();
-        }
-        return indexPage;
+    public IndexPage(Args args) {
+        super(args);
     }
 
     @Override
     public void run() {
         System.out.println("Welcome to Course Scheduling System - REGIE!");
-
-        redirect(new LoginPage());
+        redirect(new LoginPage(new Args()));
     }
 }
