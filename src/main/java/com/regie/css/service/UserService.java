@@ -1,5 +1,5 @@
-package com.regie.css.model.service;
+package com.regie.css.service;
 
-public interface UserService {
+public interface UserService extends Service {
     String getUserRole(String id);
 }

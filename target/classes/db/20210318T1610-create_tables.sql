@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS course (
 );
 
 CREATE TABLE IF NOT EXISTS schedule_record (
-    id          CHAR(23),
+    id          INT                     AUTO_INCREMENT,
     course      CHAR(9)                 NOT NULL,
     year        YEAR                    NOT NULL,
     quarter     CHAR(6)                 NOT NULL,
@@ -30,8 +30,8 @@ CREATE TABLE IF NOT EXISTS schedule_record (
     instructor  VARCHAR(20)             NOT NULL,
     class       int                     NOT NULL,
     day         CHAR(3),
-    start       TIMESTAMP,
-    end         TIMESTAMP,
+    start       TIME,
+    end         TIME,
     PRIMARY KEY (id),
     FOREIGN KEY (course)        REFERENCES course(id),
     FOREIGN KEY (instructor)    REFERENCES instructor(cnetid),

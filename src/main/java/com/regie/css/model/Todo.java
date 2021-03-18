@@ -4,6 +4,11 @@ public class Todo {
     private String userID;
     private String content;
 
+    public Todo(String userID, String content) {
+        this.userID = userID;
+        this.content = content;
+    }
+
     public String getUserID() {
         return userID;
     }

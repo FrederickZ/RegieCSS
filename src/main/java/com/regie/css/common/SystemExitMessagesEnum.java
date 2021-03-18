@@ -2,7 +2,8 @@ package com.regie.css.common;
 
 public enum SystemExitMessagesEnum {
     INVALID_INPUT("Invalid input."),
-    USER_NOT_FOUND("User not found.");
+    USER_NOT_FOUND("User not found."),
+    SYSTEM_ERROR("System error.");
 
     private String message;
 

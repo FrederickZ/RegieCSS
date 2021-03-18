@@ -1,5 +1,6 @@
 package com.regie.css.model;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,5 +64,11 @@ public class Schedule {
 
     public void setClassTimes(List<Slot> classTimes) {
         this.classTimes = classTimes;
+    }
+
+    public class Slot {
+        String day;
+        LocalTime start;
+        LocalTime end;
     }
 }

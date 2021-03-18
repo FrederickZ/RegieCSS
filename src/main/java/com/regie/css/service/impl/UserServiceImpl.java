@@ -1,13 +1,12 @@
-package com.regie.css.model.service.impl;
+package com.regie.css.service.impl;
 
-import com.regie.css.model.service.UserService;
-import com.regie.css.infrastructure.repository.UserRepo;
+import com.regie.css.common.Constants;
+import com.regie.css.service.UserService;
 
 public class UserServiceImpl implements UserService {
-    UserRepo userRepo;
     @Override
     public String getUserRole(String id) {
-        if (id.equals("regie")) {
+        if (id.equals(Constants.ADMIN_ID)) {
             return "admin";
         }
         if (id.length() == 4) {
