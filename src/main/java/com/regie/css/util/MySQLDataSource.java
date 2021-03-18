@@ -27,5 +27,4 @@ public class MySQLDataSource {
         }
         return conn;
     }
-
 }
